@@ -6,12 +6,11 @@ public abstract class Animal {
     private int satiety;
 
     public int getSatiety() {
-        //return satiety+=10;
         return satiety;
     }
 
     public int setSatiety(int k) {
-        return this.satiety+=k;
+        return this.satiety += k;
     }
 
 

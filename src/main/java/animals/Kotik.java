@@ -1,21 +1,6 @@
 package animals;
 
-public class Kotik  extends Carnivorous implements Run, Swim, Voice {
-    @Override
-    public String getVoice() {
-        return this.voice;
-    }
-
-    @Override
-    public String run() {
-        return "Я бегу!";
-    }
-
-    @Override
-    public String swim() {
-        return "Я плыву!";
-    }
-
+public class Kotik extends Carnivorous implements Run, Swim, Voice {
     private static final int METHODS = 5;
     private static int count = 0;
     private int weight;
@@ -24,12 +9,9 @@ public class Kotik  extends Carnivorous implements Run, Swim, Voice {
     //private int satiety=(int) (Math.random() * 10) + 1;
     private int satiety;
     private String[] arrayLiveDay;
-
-
     public Kotik() {
         ++count;
     }
-
     public Kotik(String name, String voice, int satiety, int weight) {
         ++count;
         this.weight = weight;
@@ -42,6 +24,24 @@ public class Kotik  extends Carnivorous implements Run, Swim, Voice {
         return count;
     }
 
+    @Override
+    public String getVoice() {
+        return this.voice;
+    }
+
+    public void setVoice(String voice) {
+        this.voice = voice;
+    }
+
+    @Override
+    public String run() {
+        return "Я бегу!";
+    }
+
+    @Override
+    public String swim() {
+        return "Я плыву!";
+    }
 
     boolean play() {
         if (getSatiety() > 0) {
@@ -148,10 +148,6 @@ public class Kotik  extends Carnivorous implements Run, Swim, Voice {
 
     public String getVoice1() {
         return voice;
-    }
-
-    public void setVoice(String voice) {
-        this.voice = voice;
     }
 
     public int getWeight() {
