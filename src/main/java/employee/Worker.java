@@ -7,7 +7,8 @@ import food.Food;
 public class Worker {
     public void feed(Animal animal, Food food) {
         System.out.println("\nРабочий дал корм");
-        animal.satiety = animal.getSatiety()+ food.getEnergy();
+        animal.setSatiety(food.getEnergy());
+        //animal.satiety = animal.getSatiety()+ food.getEnergy();
         animal.eat(food);
 
     }
