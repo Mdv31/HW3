@@ -11,7 +11,7 @@ public class Worker {
 
     }
 
-    public void getVoice(Animal animal) {
+    public void getVoice(animals.Voice animal) {
         System.out.println("\nРабочий запросил голос");
         System.out.println(animal.getVoice());
 

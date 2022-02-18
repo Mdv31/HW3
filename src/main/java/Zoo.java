@@ -1,7 +1,4 @@
-import animals.Animal;
-import animals.Duck;
-import animals.Fish;
-import animals.Tiger;
+import animals.*;
 import employee.Worker;
 import food.Grass;
 import food.Meat;
@@ -32,8 +29,11 @@ public class Zoo {
         System.out.println("\nЭнергия от мяса : " + Kolbasa.getEnergy());
 
         Animal[] Pond = createPond();
-        System.out.println(Pond[0].swim());
-        System.out.println(Pond[1].swim());
+
+
+
+        System.out.println(Swim(Pond[0]));
+        System.out.println(Pond[1]);
 
     }
 

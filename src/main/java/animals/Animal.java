@@ -16,10 +16,4 @@ public abstract class Animal {
     public abstract void eat(Food food);
 
 
-    public abstract String getVoice();
-
-    public String swim() {
-        return null;
-    }
-
 }
