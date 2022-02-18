@@ -28,7 +28,7 @@ public class Zoo {
         System.out.println("\nЭнергия от травы : " + Trawa.getEnergy());
         System.out.println("\nЭнергия от мяса : " + Kolbasa.getEnergy());
 
-        Animal[] Swim = createPond();
+        Swim[] Swim = createPond();
 
 
 
@@ -39,9 +39,9 @@ public class Zoo {
 
     }
 
-    static Animal[] createPond() {
-        Animal[] Swim;
-        Swim = new Animal[2];
+    static Swim[] createPond() {
+        Swim[] Swim;
+        Swim = new Swim[2];
         Swim[0] = new Duck();
         Swim[1] = new Fish();
         return Swim;
