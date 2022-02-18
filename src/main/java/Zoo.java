@@ -32,7 +32,7 @@ public class Zoo {
 
 
 
-        System.out.println(Swim(Pond[0]));
+        //System.out.println(Swim(Pond[0]));
         System.out.println(Pond[1]);
 
     }
