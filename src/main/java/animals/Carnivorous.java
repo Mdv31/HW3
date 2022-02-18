@@ -11,6 +11,7 @@ public abstract class Carnivorous extends Animal {
         if (food instanceof Meat) {
             System.out.println("Хищники едят мясо");
             //this.satiety = this.getSatiety()+ food.getEnergy();
+            this.setSatiety(food.getEnergy());
         } else System.out.println("Хищники не едят траву");
 
     }
