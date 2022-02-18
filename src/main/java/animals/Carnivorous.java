@@ -9,7 +9,7 @@ public abstract class Carnivorous extends Animal {
     public void eat(Food food) {
         if (food instanceof Meat) {
             System.out.println("Хищники едят мясо");
-            this.setSatiety(((Meat) food).getEnergy());
+            this.getSatiety(((Meat) food).getEnergy());
         } else System.out.println("Хищники не едят траву");
 
     }
