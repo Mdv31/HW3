@@ -3,7 +3,7 @@ package animals;
 import food.Food;
 
 public abstract class Animal {
-    private int satiety = 10;
+    private int satiety;
 
     public int getSatiety() {
         //return satiety+=10;
