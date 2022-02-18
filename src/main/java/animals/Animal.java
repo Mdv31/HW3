@@ -3,10 +3,14 @@ package animals;
 import food.Food;
 
 public abstract class Animal {
-    private final int satiety = 10;
+    private int satiety = 10;
 
     public int getSatiety() {
         return satiety;
+    }
+
+    public int setSatiety(int k) {
+        return satiety+=k;
     }
 
     public abstract void eat(Food food);

@@ -1,6 +1,21 @@
 package animals;
 
-public class Kotik {
+public class Kotik  extends Carnivorous implements Run, Swim, Voice {
+    @Override
+    public String getVoice() {
+        return this.voice;
+    }
+
+    @Override
+    public String run() {
+        return "Я бегу!";
+    }
+
+    @Override
+    public String swim() {
+        return "Я плыву!";
+    }
+
     private static final int METHODS = 5;
     private static int count = 0;
     private int weight;
@@ -131,7 +146,7 @@ public class Kotik {
         this.name = name;
     }
 
-    public String getVoice() {
+    public String getVoice1() {
         return voice;
     }
 
