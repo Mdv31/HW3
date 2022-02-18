@@ -28,6 +28,7 @@ public class Application {
 
         //сравнение голосов котиков
         compareVoice(Murka, Barsik);
+
         //кол-во созданых котиков
         System.out.println("\nКотиков создано : " + Kotik.getCount());
 

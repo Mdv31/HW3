@@ -5,8 +5,8 @@ import food.Food;
 public abstract class Animal {
     private int satiety = 10;
 
-    public int getSatiety(int k) {
-        return satiety+=k;
+    public int getSatiety() {
+        return satiety+=10;
     }
 
 
