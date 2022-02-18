@@ -9,7 +9,7 @@ public abstract class Herbivore extends Animal {
     public void eat(Food food) {
         if (food instanceof Grass) {
             System.out.println("Травоядные едят траву");
-            this.satiety = this.getSatiety()+ food.getEnergy();
+            //this.satiety = this.getSatiety()+ food.getEnergy();
         } else System.out.println("Травоядные не едят мясо");
 
     }
