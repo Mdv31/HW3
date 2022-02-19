@@ -35,21 +35,19 @@ public class Zoo {
         System.out.println(Swim[1]);
 
 
-        fillCarnivorousAviary(carnivorousAviary);
+        fillCarnivorousAviary();
         getCarnivorous("T1");
-        fillHerbivoreAviary(herbivoreAviary);
+        fillHerbivoreAviary();
         getHerbivore("D1");
 
 
     }
-    static void getCarnivorous(String name){
-        carnivorousAviary.getAnimal(name);
+    static Animal getCarnivorous(String name){
+        return carnivorousAviary.getAnimal(name);
     }
-    static void getHerbivore(String name){
-        herbivoreAviary.getAnimal(name);
-    }
+    static Animal getHerbivore(String name){ return herbivoreAviary.getAnimal(name); }
 
-    static void fillCarnivorousAviary(Aviary<Carnivorous> carnivorousAviary){
+    static void fillCarnivorousAviary(){
         Tiger T1 = new Tiger("T1");
         Tiger T2 = new Tiger("T2");
         //Duck D1 = new Duck("D1");
@@ -61,7 +59,7 @@ public class Zoo {
             e.printStackTrace();
         }
     }
-    static void fillHerbivoreAviary(Aviary<Herbivore> herbivoreAviary){
+    static void fillHerbivoreAviary(){
         Duck D1 = new Duck("D1");
         Duck D2 = new Duck("D2");
         //Tiger T1 = new Tiger("T1");

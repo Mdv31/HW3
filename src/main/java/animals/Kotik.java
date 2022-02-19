@@ -23,13 +23,12 @@ public class Kotik extends Carnivorous implements Run, Swim, Voice {
         this.satiety = satiety;
     }
 
+    public static int getCount() {
+        return count;
+    }
 
     public Size getSize() {
         return Size.SMALL;
-    }
-
-    public static int getCount() {
-        return count;
     }
 
     @Override
