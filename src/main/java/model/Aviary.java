@@ -18,18 +18,18 @@ public class Aviary <T extends Animal> {
 
     private HashMap<String, T> aviaryMap = new HashMap<>();
 
-    public void addAnimal(T animal) throws WrongSizeException{
+    public void addAnimal(T animal) {
         if (this.size.equals(animal.getSize())) {
             aviaryMap.put(animal.getName(), animal);
         } else {
             throw new WrongSizeException("!!! Исклюяение, размер животного отличается от размера вольера."+this.size+"  "+animal.getSize());
         }
-
-
     }
+
     public animals.Animal getAnimal (String name){
         return aviaryMap.get(name);
     }
+
     public boolean removeAnimal (String name){
         if (aviaryMap.containsKey(name)){
         aviaryMap.remove(name);
