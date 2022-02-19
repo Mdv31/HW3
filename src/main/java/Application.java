@@ -5,8 +5,8 @@ public class Application {
 
     public static void main(String[] args) {
 
-        Kotik Barsik = new Kotik();
-        Barsik.setName("Барсик");
+        Kotik Barsik = new Kotik("Барсик");
+        //Barsik.setName("Барсик");
         //для проверки голосов
         //Barsik.setVoice("Фыр-фыр!");
         Barsik.setVoice("Мяу-мяу!");
