@@ -11,6 +11,14 @@ import static model.Size.SMALL;
 public class Zoo {
 
 
+    // ДЗ3
+
+    //carnivorousAviary для хищников;
+    private static Aviary<Carnivorous> carnivorousAviary= new Aviary<>(LARGE);
+    //herbivoreAviary для травоядных.
+    private static Aviary<Herbivore> herbivoreAviary= new Aviary<>(SMALL);
+
+
     public static void main(String[] args) {
         Duck Donald = new Duck("Donald");
         Tiger Murka = new Tiger("Murka");
@@ -20,49 +28,53 @@ public class Zoo {
 
         Ivan.getVoice(Donald);
         Ivan.feed(Donald, Trawa);
-        Ivan.feed(Donald, Kolbasa);
+        //Ivan.feed(Donald, Kolbasa);
         Ivan.getVoice(Murka);
-        Ivan.feed(Murka, Trawa);
+        //Ivan.feed(Murka, Trawa);
         Ivan.feed(Murka, Kolbasa);
 
-        System.out.println("\nЭнергия от травы : " + Trawa.getEnergy());
-        System.out.println("\nЭнергия от мяса : " + Kolbasa.getEnergy());
-
         Swim[] Swim = createPond();
-
-
         System.out.println(Swim[0]);
         System.out.println(Swim[1]);
 
-        // ДЗ3
 
-        //carnivorousAviary для хищников;
-        Aviary<Carnivorous> carnivorousAviary= new Aviary<>(LARGE);
-        //herbivoreAviary для травоядных.
-        Aviary<Herbivore> herbivoreAviary= new Aviary<>(SMALL);
-        fillCarnivorousAviary();
-
-        Tiger T1 = new Tiger("T1");
-        try {
-            carnivorousAviary.addAnimal ("T1", T1);
-        } catch (WrongSizeException e) {
-            e.printStackTrace();
-        }
-
-        //getCarnivorous("T1");
-        carnivorousAviary.getAnimal("T1");
+        fillCarnivorousAviary(carnivorousAviary);
+        getCarnivorous("T1");
+        fillHerbivoreAviary(herbivoreAviary);
+        getHerbivore("D1");
 
 
     }
     static void getCarnivorous(String name){
-        //carnivorousAviary.getAnimal(name);
+        carnivorousAviary.getAnimal(name);
+    }
+    static void getHerbivore(String name){
+        herbivoreAviary.getAnimal(name);
     }
 
-    static void fillCarnivorousAviary(){
+    static void fillCarnivorousAviary(Aviary<Carnivorous> carnivorousAviary){
         Tiger T1 = new Tiger("T1");
         Tiger T2 = new Tiger("T2");
-       // return carnivorousAviary.addAnimal ("T1", T1);
-
+        //Duck D1 = new Duck("D1");
+        try {
+            carnivorousAviary.addAnimal ("T1", T1);
+            carnivorousAviary.addAnimal ("T2", T2);
+            //carnivorousAviary.addAnimal ("D1", D1);
+        } catch (WrongSizeException e) {
+            e.printStackTrace();
+        }
+    }
+    static void fillHerbivoreAviary(Aviary<Herbivore> herbivoreAviary){
+        Duck D1 = new Duck("D1");
+        Duck D2 = new Duck("D2");
+        //Tiger T1 = new Tiger("T1");
+        try {
+            Zoo.herbivoreAviary.addAnimal ("D1", D1);
+            Zoo.herbivoreAviary.addAnimal ("D2", D2);
+            //herbivoreAviary.addAnimal ("T1", T1);
+        } catch (WrongSizeException e) {
+            e.printStackTrace();
+        }
     }
 
     static Swim[] createPond() {

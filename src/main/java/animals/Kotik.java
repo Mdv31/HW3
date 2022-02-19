@@ -10,9 +10,11 @@ public class Kotik extends Carnivorous implements Run, Swim, Voice {
     private String voice;
     private int satiety;
     private String[] arrayLiveDay;
+
     public Kotik() {
         ++count;
     }
+
     public Kotik(String name, String voice, int satiety, int weight) {
         ++count;
         this.weight = weight;
