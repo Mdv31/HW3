@@ -1,10 +1,12 @@
-import animals.Duck;
-import animals.Fish;
-import animals.Swim;
-import animals.Tiger;
+import animals.*;
 import employee.Worker;
 import food.Grass;
 import food.Meat;
+import model.Aviary;
+import model.Size;
+
+import static model.Size.LARGE;
+import static model.Size.SMALL;
 
 public class Zoo {
 
@@ -36,6 +38,11 @@ public class Zoo {
 
         System.out.println(Swim[0]);
         System.out.println(Swim[1]);
+
+        //carnivorousAviary для хищников;
+        Aviary<Carnivorous> carnivorousAviary= new Aviary<>(LARGE);
+        //herbivoreAviary для травоядных.
+        Aviary<Herbivore> herbivoreAviary= new Aviary<>(SMALL);
 
 
     }
