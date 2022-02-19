@@ -42,18 +42,22 @@ public class Zoo {
 
 
     }
+    //Carnivorous
     static Animal getCarnivorous(String name){
         return carnivorousAviary.getAnimal(name);
     }
-    static Animal getHerbivore(String name){ return herbivoreAviary.getAnimal(name); }
+    //Herbivore
+    static Animal getHerbivore(String name){
+        return herbivoreAviary.getAnimal(name);
+    }
 
     static void fillCarnivorousAviary(){
         Tiger T1 = new Tiger("T1");
         Tiger T2 = new Tiger("T2");
         //Duck D1 = new Duck("D1");
         try {
-            carnivorousAviary.addAnimal ("T1", T1);
-            carnivorousAviary.addAnimal ("T2", T2);
+            carnivorousAviary.addAnimal (T1);
+            carnivorousAviary.addAnimal (T2);
             //carnivorousAviary.addAnimal ("D1", D1);
         } catch (WrongSizeException e) {
             e.printStackTrace();
@@ -64,8 +68,8 @@ public class Zoo {
         Duck D2 = new Duck("D2");
         //Tiger T1 = new Tiger("T1");
         try {
-            Zoo.herbivoreAviary.addAnimal ("D1", D1);
-            Zoo.herbivoreAviary.addAnimal ("D2", D2);
+            Zoo.herbivoreAviary.addAnimal (D1);
+            Zoo.herbivoreAviary.addAnimal (D2);
             //herbivoreAviary.addAnimal ("T1", T1);
         } catch (WrongSizeException e) {
             e.printStackTrace();

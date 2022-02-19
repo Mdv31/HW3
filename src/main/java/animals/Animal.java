@@ -17,6 +17,10 @@ public abstract class Animal {
         return this.satiety += k;
     }
 
+    public String getName() {
+        return name;
+    }
+
 
     public abstract void eat(Food food) throws WrongFoodException;
     public abstract Size getSize();

@@ -1,9 +1,11 @@
 package model;
 
+import animals.Animal;
+
 import java.util.HashMap;
 
 
-public class Aviary <Animal> {
+public class Aviary <A extends Animal> {
     private Size size;
 
     public Aviary(Size size) {
@@ -13,11 +15,11 @@ public class Aviary <Animal> {
         return this.size;
     }
 
-    HashMap<String, animals.Animal> namesAndAnimals = new HashMap<>();
+    private HashMap<String, A> aviaryMap = new HashMap<>();
 
-    public void addAnimal(String name, animals.Animal animal) throws WrongSizeException{
+    public void addAnimal(A animal) throws WrongSizeException{
         if (this.size.equals(animal.getSize())) {
-            namesAndAnimals.put(name, animal);
+            aviaryMap.put(animal.getName(), animal);
         } else {
             throw new WrongSizeException("!!! Исклюяение, размер животного отличается от размера вольера."+this.size+"  "+animal.getSize());
         }
@@ -25,11 +27,11 @@ public class Aviary <Animal> {
 
     }
     public animals.Animal getAnimal (String name){
-        return namesAndAnimals.get(name);
+        return aviaryMap.get(name);
     }
     public boolean removeAnimal (String name){
-        if (namesAndAnimals.containsKey(name)){
-        namesAndAnimals.remove(name);
+        if (aviaryMap.containsKey(name)){
+        aviaryMap.remove(name);
         return true;}
         else { System.out.println("Животного нет в вальере.");
             return false;}
