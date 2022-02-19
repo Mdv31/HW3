@@ -1,12 +1,13 @@
 package animals;
 
+import model.Size;
+
 public class Kotik extends Carnivorous implements Run, Swim, Voice {
     private static final int METHODS = 5;
     private static int count = 0;
     private int weight;
     private String name;
     private String voice;
-    //private int satiety=(int) (Math.random() * 10) + 1;
     private int satiety;
     private String[] arrayLiveDay;
     public Kotik() {
@@ -18,6 +19,9 @@ public class Kotik extends Carnivorous implements Run, Swim, Voice {
         this.name = name;
         this.voice = voice;
         this.satiety = satiety;
+    }
+    public Size getSize() {
+        return Size.SMALL;
     }
 
     public static int getCount() {

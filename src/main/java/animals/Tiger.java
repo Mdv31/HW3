@@ -1,5 +1,7 @@
 package animals;
 
+import model.Size;
+
 public class Tiger extends Carnivorous implements Run, Swim, Voice {
 
     private final String voice;
@@ -7,6 +9,10 @@ public class Tiger extends Carnivorous implements Run, Swim, Voice {
 
     public Tiger() {
         this.voice = "Mrrrr - Mrrrr!";
+    }
+
+    public Size getSize() {
+        return Size.LARGE;
     }
 
 
