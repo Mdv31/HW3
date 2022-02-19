@@ -12,10 +12,7 @@ public class Zoo {
 
 
     // ДЗ3
-
-    //carnivorousAviary для хищников;
     private static Aviary<Carnivorous> carnivorousAviary= new Aviary<>(LARGE);
-    //herbivoreAviary для травоядных.
     private static Aviary<Herbivore> herbivoreAviary= new Aviary<>(SMALL);
 
 

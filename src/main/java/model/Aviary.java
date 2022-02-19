@@ -13,7 +13,7 @@ public class Aviary <Animal> {
         return this.size;
     }
 
-    HashMap<String, animals.Animal> namesAndAnimals = new HashMap<String, animals.Animal>();
+    HashMap<String, animals.Animal> namesAndAnimals = new HashMap<>();
 
     public void addAnimal(String name, animals.Animal animal) throws WrongSizeException{
         if (this.size.equals(animal.getSize())) {
