@@ -7,8 +7,13 @@ public class Tiger extends Carnivorous implements Run, Swim, Voice {
     private final String voice;
 
 
-    public Tiger() {
+    public Tiger(String name) {
         this.voice = "Mrrrr - Mrrrr!";
+    }
+
+    private String name;
+    public String getName() {
+        return this.name;
     }
 
     public Size getSize() {

@@ -7,8 +7,14 @@ public class Duck extends Herbivore implements Fly, Run, Swim, Voice {
     private final String voice;
 
 
-    public Duck() {
+    public Duck(String name) {
+        this.name = name;
         this.voice = "Krya - Krya!";
+    }
+
+    private String name;
+    public String getName() {
+        return this.name;
     }
 
     public Size getSize() {

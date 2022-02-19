@@ -7,10 +7,14 @@ public class Rabbit extends Herbivore implements Run, Voice {
     private int satiety;
 
 
-    public Rabbit() {
+    public Rabbit(String name) {
         this.voice = "Piii - Piii!";
     }
 
+    private String name;
+    public String getName() {
+        return this.name;
+    }
     public Size getSize() {
         return Size.SMALL;
     }

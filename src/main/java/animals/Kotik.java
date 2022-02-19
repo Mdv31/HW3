@@ -20,6 +20,8 @@ public class Kotik extends Carnivorous implements Run, Swim, Voice {
         this.voice = voice;
         this.satiety = satiety;
     }
+
+
     public Size getSize() {
         return Size.SMALL;
     }
@@ -166,11 +168,6 @@ public class Kotik extends Carnivorous implements Run, Swim, Voice {
         return arrayLiveDay[hour];
     }
 
-    /* public boolean getSatiety (int k) {
-         if (k > 0) {
-             return true;
-         } else return false;
-     }*/
     public int getSatiety() {
         return this.satiety;
     }

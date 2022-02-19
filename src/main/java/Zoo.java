@@ -10,8 +10,8 @@ public class Zoo {
 
 
     public static void main(String[] args) {
-        Duck Donald = new Duck();
-        Tiger Murka = new Tiger();
+        Duck Donald = new Duck("Donald");
+        Tiger Murka = new Tiger("Murka");
         Grass Trawa = new Grass();
         Meat Kolbasa = new Meat();
         Worker Ivan = new Worker();
@@ -34,7 +34,6 @@ public class Zoo {
         Swim[] Swim = createPond();
 
 
-        //System.out.println(Swim(Pond[0]));
         System.out.println(Swim[0]);
         System.out.println(Swim[1]);
 
@@ -44,8 +43,8 @@ public class Zoo {
     static Swim[] createPond() {
         Swim[] Swim;
         Swim = new Swim[2];
-        Swim[0] = new Duck();
-        Swim[1] = new Fish();
+        Swim[0] = new Duck("Donald");
+        Swim[1] = new Fish("Flipper");
         return Swim;
     }
 }

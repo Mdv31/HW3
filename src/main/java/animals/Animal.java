@@ -4,6 +4,8 @@ import food.Food;
 import model.Size;
 
 public abstract class Animal {
+    String name;
+
     private int satiety;
 
     public int getSatiety() {
