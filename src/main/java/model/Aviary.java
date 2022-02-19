@@ -5,9 +5,10 @@ import animals.Animal;
 import java.util.HashMap;
 
 
-public class Aviary <Animal> {
-    private Size size;
+public class Aviary <T extends Animal> {
+    private T animal;
 
+    private Size size;
     public Aviary(Size size) {
         this.size=size;
     }
@@ -15,9 +16,9 @@ public class Aviary <Animal> {
         return this.size;
     }
 
-    private HashMap<String, Animal> aviaryMap = new HashMap<>();
+    private HashMap<String, T> aviaryMap = new HashMap<>();
 
-    public void addAnimal(animals.Animal animal) throws WrongSizeException{
+    public void addAnimal(T animal) throws WrongSizeException{
         if (this.size.equals(animal.getSize())) {
             aviaryMap.put(animal.getName(), animal);
         } else {

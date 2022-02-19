@@ -43,12 +43,12 @@ public class Zoo {
 
     }
     //Carnivorous
-    static Animal getCarnivorous(String name){
-        return carnivorousAviary.getAnimal(name);
+    static Carnivorous getCarnivorous(String name){
+        return (Carnivorous)carnivorousAviary.getAnimal(name);
     }
     //Herbivore
-    static Animal getHerbivore(String name){
-        return herbivoreAviary.getAnimal(name);
+    static Herbivore getHerbivore(String name){
+        return (Herbivore)herbivoreAviary.getAnimal(name);
     }
 
     static void fillCarnivorousAviary(){
