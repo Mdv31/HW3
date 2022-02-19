@@ -18,11 +18,6 @@ public class Zoo {
         Meat Kolbasa = new Meat();
         Worker Ivan = new Worker();
 
-        // При выхове метода гетвойс воркером у воркера - ошибка :
-        // java: incompatible types: main.java.employee.Worker cannot be converted to main.java.animals.Animal
-        // Для проверки снять комментарий
-        //Ivan.getVoice(Ivan);
-
         Ivan.getVoice(Donald);
         Ivan.feed(Donald, Trawa);
         Ivan.feed(Donald, Kolbasa);
@@ -39,11 +34,30 @@ public class Zoo {
         System.out.println(Swim[0]);
         System.out.println(Swim[1]);
 
+        // ДЗ3
+
         //carnivorousAviary для хищников;
         Aviary<Carnivorous> carnivorousAviary= new Aviary<>(LARGE);
         //herbivoreAviary для травоядных.
         Aviary<Herbivore> herbivoreAviary= new Aviary<>(SMALL);
+        fillCarnivorousAviary();
 
+        Tiger T1 = new Tiger("T1");
+        carnivorousAviary.addAnimal ("T1", T1);
+
+        //getCarnivorous("T1");
+        carnivorousAviary.getAnimal("T1");
+
+
+    }
+    static void getCarnivorous(String name){
+        //carnivorousAviary.getAnimal(name);
+    }
+
+    static void fillCarnivorousAviary(){
+        Tiger T1 = new Tiger("T1");
+        Tiger T2 = new Tiger("T2");
+       // return carnivorousAviary.addAnimal ("T1", T1);
 
     }
 

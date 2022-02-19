@@ -5,7 +5,7 @@ import food.Grass;
 import food.WrongFoodException;
 
 public abstract class Herbivore extends Animal {
-    int satiety;
+   // int satiety;
 
     @Override
     public void eat(Food food) throws WrongFoodException {

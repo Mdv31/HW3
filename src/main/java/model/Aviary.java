@@ -7,15 +7,19 @@ public class Aviary <Animal> {
     private Size size;
 
     public Aviary(Size size) {
-
+        this.size=size;
     }
+    public Size getSize() {
+        return this.size;
+    }
+
     HashMap<String, animals.Animal> namesAndAnimals = new HashMap<String, animals.Animal>();
 
     public void addAnimal(String name, animals.Animal animal) throws WrongSizeException{
-        if (this.size==animal.getSize()) {
+        if (this.size.equals(animal.getSize())) {
             namesAndAnimals.put(name, animal);
         } else {
-            throw new WrongSizeException("!!! Исклюяение, размер животного отличается от размера вольера.");
+            throw new WrongSizeException("!!! Исклюяение, размер животного отличается от размера вольера."+this.size+"  "+animal.getSize());
         }
 
 
