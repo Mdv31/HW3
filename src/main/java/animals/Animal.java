@@ -1,6 +1,7 @@
 package animals;
 
 import food.Food;
+import food.WrongFoodException;
 import model.Size;
 
 public abstract class Animal {
@@ -17,7 +18,7 @@ public abstract class Animal {
     }
 
 
-    public abstract void eat(Food food);
+    public abstract void eat(Food food) throws WrongFoodException;
     public abstract Size getSize();
 
 

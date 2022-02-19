@@ -2,17 +2,17 @@ package animals;
 
 import food.Food;
 import food.Meat;
+import food.WrongFoodException;
 
 public abstract class Carnivorous extends Animal {
     int satiety;
 
-    @Override
-    public void eat(Food food) {
+    public void eat(Food food) throws WrongFoodException {
         if (food instanceof Meat) {
             System.out.println("Хищники едят мясо");
-            //this.satiety = this.getSatiety()+ food.getEnergy();
             this.setSatiety(food.getEnergy());
-        } else System.out.println("Хищники не едят траву");
+        } else throw new WrongFoodException("Хищники не едят траву");
+
 
     }
 }
