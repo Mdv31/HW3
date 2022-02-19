@@ -3,7 +3,7 @@ import employee.Worker;
 import food.Grass;
 import food.Meat;
 import model.Aviary;
-import model.Size;
+import model.WrongSizeException;
 
 import static model.Size.LARGE;
 import static model.Size.SMALL;
@@ -43,7 +43,11 @@ public class Zoo {
         fillCarnivorousAviary();
 
         Tiger T1 = new Tiger("T1");
-        carnivorousAviary.addAnimal ("T1", T1);
+        try {
+            carnivorousAviary.addAnimal ("T1", T1);
+        } catch (WrongSizeException e) {
+            e.printStackTrace();
+        }
 
         //getCarnivorous("T1");
         carnivorousAviary.getAnimal("T1");
